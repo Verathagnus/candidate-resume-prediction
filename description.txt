@@ -1,0 +1,9 @@
+First, the required libraries such as nltk, numpy, pandas, sklearn etc. were imported. 
+The dataset was loaded using pandas dataframe.
+The train dataset consisted of the Candidate ID and Match Percentage.
+The train resume directly was added to the ID and the .pdf extension at the end to get the location of the corresponding resume.
+Then tika library was imported for extracting the pdf text from each pdf, cleaned and added to a new column the dataframe, text.
+Same was done for the test datset.
+Then, tokenizer was called on the text column to get the encoded column.
+This was passed to a linear regression model and it was used to generate prediction of Match Percentage from the test text column after tokenizing.
+A new dataframe was created to get the Candidate ID column from test and Match Percentage from predicted output.
